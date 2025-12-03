@@ -1,0 +1,53 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IDE-specific cache and logs
+out/
+
+# Gradle-specific files
+.gradle/
+build/
+
+# Gradle wrapper files
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java compiled class files
+*.class
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Java keystore files
+*.jks
+
+# Generated Javadoc
+javadoc/
+
+# Maven build directory
+target/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Dependency caches (useful for local builds)
+**/build/
+
+# Environment variable files
+.env
+.env.*
+
+# Advent of Code
+/input/
+/leaderboard/
+/cookies.txt
