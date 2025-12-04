@@ -19,6 +19,15 @@ import java.util.stream.LongStream;
 
 @SuppressWarnings({"unused", "SameParameterValue", "UseOfSystemOutOrSystemErr"})
 class AocUtils {
+    static char[][] grid(String input) {
+        List<String> lines = input.lines().toList();
+        char[][] grid = new char[lines.size()][];
+        for (int i = 0; i < lines.size(); i++) {
+            grid[i] = lines.get(i).toCharArray();
+        }
+        return grid;
+    }
+
     static int modulo(int a, int b) {
         int remainder = a % b;
         return remainder < 0 ? remainder + b : remainder;
