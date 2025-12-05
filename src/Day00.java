@@ -17,7 +17,7 @@ public class Day00 {
     }
 
     private static void partI(String input) {
-        var res = 0;
+        long res = 0;
         System.out.println("Part I: " + res);
     }
 
