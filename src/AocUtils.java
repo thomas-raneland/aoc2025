@@ -197,13 +197,13 @@ class AocUtils {
         }
     }
 
-    static String downloadLeaderboard() {
+    static String downloadLeaderboard(boolean force) {
         long id = 2897173;
 
         try (HttpClient client = HttpClient.newHttpClient()) {
             Path path = Path.of("leaderboard/" + 2897173 + ".json");
 
-            if (!Files.exists(path)) {
+            if (force || !Files.exists(path)) {
                 String cookies = Files.readString(Path.of("cookies.txt")).replace("\r", "").replace("\n", "");
                 String content = client.send(HttpRequest.newBuilder()
                                                         .uri(URI.create(

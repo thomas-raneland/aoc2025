@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -41,7 +40,7 @@ public class Day07 {
         long res = 0;
         char[][] grid = AocUtils.grid(input);
         int start = new String(grid[0]).indexOf('S');
-        List<Integer> beams = List.of(start);
+        Set<Integer> beams = Set.of(start);
 
         for (int y = 1; y < grid.length; y++) {
             Set<Integer> newBeams = new HashSet<>();
@@ -56,7 +55,7 @@ public class Day07 {
                 }
             }
 
-            beams = new ArrayList<>(newBeams);
+            beams = newBeams;
         }
 
         System.out.println("Part I: " + res);
